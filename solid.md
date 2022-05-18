@@ -15,3 +15,7 @@ Api can:
 - Different currencies have a rate
 - Exchange currency
 - Exchange fee
+
+TODO: Move links from bookmark with remarks that we had as comments in code.
+TODO: Swagger examples
+[Central Error Handling](./Levolut.Api.V2/Bootstrap/ErrorHandling.cs)
