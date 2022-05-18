@@ -26,6 +26,8 @@ namespace Levolut.Api.V2.Controllers
         [HttpGet("Balance/{bankId}/{userId}")]
         public IActionResult GetBalance(long userId, long bankId)
         {
+            // Move to handler and service.
+            // Custom exception.
             try
             {
                 var balance = context.Balances
@@ -48,11 +50,15 @@ namespace Levolut.Api.V2.Controllers
         [HttpPost("Add/{bankId}/{userId}")]
         public IActionResult AddMoney(long bankId, long userId, [FromBody] AddMoneyRequest request)
         {
+            // Move to handler and service.
+            // Get balance.
             var balance = context.Balances
                      .Where(b => b.UserId == userId && b.BankId == bankId)
                      .OrderByDescending(b => b.CreatedAt)
                      .FirstOrDefault();
 
+            // Custom exception
+            // Get bankFeeRule.
             BankFeeRule bankFeeRule;
             try
             {
@@ -65,22 +71,25 @@ namespace Levolut.Api.V2.Controllers
                 throw new InvalidOperationException("Bank Fee rule not found.");
             }
 
-            var exchangeFee = request.Currency == (balance?.Currency ?? request.Currency) ? 0 : bankFeeRule.Fee;
+            // Blocked countries check
             var blockedCountries = bankFeeRule.BlockedCountries;
-
-            var requestCurrencyRate = currencyProvider.GetRate(request.Currency);
-            var currentBalanceCurrencyRate = currencyProvider.GetRate(balance?.Currency ?? request.Currency);
-
             if (blockedCountries.Any(bc => bc.Name == request.Country))
             {
                 throw new InvalidOperationException("Country is blocked.");
             }
 
+            // Exchange money
+            var exchangeFee = request.Currency == (balance?.Currency ?? request.Currency) ? 0 : bankFeeRule.Fee;
+            var requestCurrencyRate = currencyProvider.GetRate(request.Currency);
+            var currentBalanceCurrencyRate = currencyProvider.GetRate(balance?.Currency ?? request.Currency);
+            var exchanged = request.Amount / currentBalanceCurrencyRate * requestCurrencyRate * (1 - exchangeFee);
+
+            // CmdHandler.
             Balance balanceEntity = new Balance
             {
                 UserId = userId,
                 BankId = bankId,
-                Amount = (balance?.Amount ?? 0) + request.Amount / currentBalanceCurrencyRate * requestCurrencyRate * (1 - exchangeFee),
+                Amount = (balance?.Amount ?? 0) + exchanged,
                 CreatedAt = DateTime.UtcNow,
             };
 

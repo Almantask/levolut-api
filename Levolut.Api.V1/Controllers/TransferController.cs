@@ -41,6 +41,7 @@ namespace Levolut.Api.V1.Controllers
             }
             catch (InvalidOperationException)
             {
+                Console.WriteLine("Failed getting balance.");
                 return NotFound();
             }
         }

@@ -1,3 +1,5 @@
+using Hellang.Middleware.ProblemDetails;
+using Levolut.Api.V2.Bootstrap;
 using Levolut.Api.V2.Infrastructure.Database;
 using Levolut.Api.V2.Services;
 using Microsoft.EntityFrameworkCore;
@@ -6,12 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<LevolutDbContext>(options => options.UseInMemoryDatabase("Levolut"));
-builder.Services.AddSingleton<ICurrencyProvider, CurrencyProvider>();
-builder.Services.AddControllers().AddNewtonsoftJson();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+var services = builder.Services;
+services.AddControllerConfiguration();
+services.AddDocs();
+services.AddLevolutDatabase();
+services.AddErrorHandling();
+services.AddLevolutDomain();
+
 
 var app = builder.Build();
 
@@ -21,6 +24,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseProblemDetails();
 
 app.UseAuthorization();
 
