@@ -8,7 +8,9 @@ using Microsoft.EntityFrameworkCore;
 namespace Levolut.Api.V2.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{v:apiVersion}/[controller]")]
+    [Produces("application/json")]
     public class TransferController : ControllerBase
     {
 
@@ -24,6 +26,8 @@ namespace Levolut.Api.V2.Controllers
         }
 
         [HttpGet("Balance/{bankId}/{userId}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetBalanceResponse))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetBalance(long userId, long bankId)
         {
             // Move to handler and service.
@@ -48,6 +52,8 @@ namespace Levolut.Api.V2.Controllers
         }
 
         [HttpPost("Add/{bankId}/{userId}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AddMoneyResponse))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult AddMoney(long bankId, long userId, [FromBody] AddMoneyRequest request)
         {
             // Move to handler and service.
@@ -105,6 +111,8 @@ namespace Levolut.Api.V2.Controllers
         }
 
         [HttpPost("Cash/{bankId}/{userId}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CashMoneyResponse))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult CashMoney(long bankId, long userId, [FromBody] CashMoneyRequest request)
         {
             var balance = context.Balances

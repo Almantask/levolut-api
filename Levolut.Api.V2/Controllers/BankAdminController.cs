@@ -9,7 +9,9 @@ using Microsoft.EntityFrameworkCore;
 namespace Levolut.Api.V2.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{v:apiVersion}/[controller]")]
+    [Produces("application/json")]
     public class BankAdminController : ControllerBase
     {
         private readonly IBankFeeService bankFeeSerivce;
@@ -20,6 +22,7 @@ namespace Levolut.Api.V2.Controllers
         }
 
         [HttpGet(Name = "Rule/{bankId}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetBankFeeRulesResponse))]
         public IActionResult GetRules(long bankId)
         {
             // Mention that it could be improved by having 3 different kinds of models:
@@ -36,6 +39,7 @@ namespace Levolut.Api.V2.Controllers
         }
 
         [HttpPost(Name = "Rule/{bankId}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BankFeeRule))]
         public IActionResult AddRule(long bankId, AddBankFeeRuleRequest request)
         {
             // We could call query handler directly, because that's all it does NOW.
