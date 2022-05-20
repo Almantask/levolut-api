@@ -1,7 +1,8 @@
-﻿using Levolut.Api.V2.Infrastructure.Database;
+﻿using Levolut.Api.V2.CommandHandlers.Commands;
+using Levolut.Api.V2.Infrastructure.Database;
 using Levolut.Api.V2.Infrastructure.Database.Models;
 
-namespace Levolut.Api.V2.Controllers
+namespace Levolut.Api.V2.CommandHandlers
 {
     public class AddBankFeeRuleCommandHandler : ICommandHandler<AddBankFeeRuleCommand, BankFeeRule>
     {

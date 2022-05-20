@@ -1,6 +1,12 @@
-﻿using Levolut.Api.V2.Infrastructure.Database.Models;
+﻿using Levolut.Api.V2.CommandHandlers;
+using Levolut.Api.V2.CommandHandlers.Commands;
+using Levolut.Api.V2.Exceptions;
+using Levolut.Api.V2.Infrastructure.Database.Models;
+using Levolut.Api.V2.QueryHandlers;
+using Levolut.Api.V2.QueryHandlers.Queries;
+using Levolut.Api.V2.Services.Interfaces;
 
-namespace Levolut.Api.V2.Controllers
+namespace Levolut.Api.V2.Services
 {
     // Why do we need a service? Why can't we call db directly or at least why can't we call handler directly?
     public class BankFeeService : IBankFeeService

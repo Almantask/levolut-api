@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Levolut.Api.V2.Controllers
+namespace Levolut.Api.V2.Exceptions
 {
     [Serializable]
     internal class EntityNotFoundException : Exception

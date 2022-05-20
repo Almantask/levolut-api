@@ -1,4 +1,4 @@
-﻿namespace Levolut.Api.V2.Controllers
+﻿namespace Levolut.Api.V2.QueryHandlers.Queries
 {
     public class GetRuleQuery
     {

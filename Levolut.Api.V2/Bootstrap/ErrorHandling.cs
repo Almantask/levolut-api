@@ -1,5 +1,5 @@
 ﻿using Hellang.Middleware.ProblemDetails;
-using Levolut.Api.V2.Controllers;
+using Levolut.Api.V2.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Levolut.Api.V2.Bootstrap

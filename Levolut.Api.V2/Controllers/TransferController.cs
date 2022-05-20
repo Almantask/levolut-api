@@ -1,7 +1,7 @@
 using Levolut.Api.V2.Contracts;
 using Levolut.Api.V2.Infrastructure.Database;
 using Levolut.Api.V2.Infrastructure.Database.Models;
-using Levolut.Api.V2.Services;
+using Levolut.Api.V2.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

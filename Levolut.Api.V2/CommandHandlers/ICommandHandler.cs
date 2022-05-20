@@ -1,6 +1,6 @@
-﻿namespace Levolut.Api.V2.Controllers
+﻿namespace Levolut.Api.V2.CommandHandlers
 {
-    public interface ICommandHandler<TCommand, TResponse> 
+    public interface ICommandHandler<TCommand, TResponse>
         where TCommand : class
         where TResponse : class
     {
