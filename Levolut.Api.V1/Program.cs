@@ -3,27 +3,32 @@ using Levolut.Api.V1.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddDbContext<LevolutDbContext>(options => options.UseInMemoryDatabase("Levolut"));
-builder.Services.AddSingleton<ICurrencyProvider, CurrencyProvider>();
-builder.Services.AddControllers().AddNewtonsoftJson();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+SetupServices(builder.Services);
 
 var app = builder.Build();
+SetupMiddleware(app);
+app.Run();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+static void SetupServices(IServiceCollection services)
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    services.AddDbContext<LevolutDbContext>(options => options.UseInMemoryDatabase("Levolut"));
+    services.AddSingleton<ICurrencyProvider, CurrencyProvider>();
+    services.AddControllers().AddNewtonsoftJson();
+    services.AddEndpointsApiExplorer();
+    services.AddSwaggerGen();
 }
 
-app.UseAuthorization();
+static void SetupMiddleware(WebApplication app)
+{
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
 
-app.MapControllers();
+    app.UseAuthorization();
 
-app.Run();
+    app.MapControllers();
+}
+
+
