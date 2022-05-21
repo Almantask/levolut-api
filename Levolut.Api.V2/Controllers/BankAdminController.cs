@@ -1,7 +1,7 @@
 using Levolut.Api.V2.Contracts;
 using Levolut.Api.V2.Contracts.Requests;
 using Levolut.Api.V2.Contracts.Responses;
-using Levolut.Api.V2.Database.Models;
+using Levolut.Api.V2.Database.Entities;
 using Levolut.Api.V2.Services.BankFee;
 using Microsoft.AspNetCore.Mvc;
 // What is the responsibility of a controller?

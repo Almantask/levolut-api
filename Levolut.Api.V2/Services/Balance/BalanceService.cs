@@ -9,11 +9,11 @@ namespace Levolut.Api.V2.Services.Balance;
 
 public class BalanceService : IBalanceService
 {
-    private readonly IQueryHandler<GetCurrentBalanceQuery, Database.Models.Balance> _getCurrentBalanceQueryHandler;
+    private readonly IQueryHandler<GetCurrentBalanceQuery, Database.Entities.Balance> _getCurrentBalanceQueryHandler;
     private readonly IMoneyExchanger _moneyExchanger;
-    private readonly ICommandHandler<AddBalanceCommand, Database.Models.Balance> _addBalanceCommandHandler;
+    private readonly ICommandHandler<AddBalanceCommand, Database.Entities.Balance> _addBalanceCommandHandler;
 
-    public BalanceService(IQueryHandler<GetCurrentBalanceQuery, Database.Models.Balance> getCurrentBalanceQueryHandler, IMoneyExchanger moneyExchanger, ICommandHandler<AddBalanceCommand, Database.Models.Balance> addBalanceCommandHandler)
+    public BalanceService(IQueryHandler<GetCurrentBalanceQuery, Database.Entities.Balance> getCurrentBalanceQueryHandler, IMoneyExchanger moneyExchanger, ICommandHandler<AddBalanceCommand, Database.Entities.Balance> addBalanceCommandHandler)
     {
         _getCurrentBalanceQueryHandler = getCurrentBalanceQueryHandler;
         _moneyExchanger = moneyExchanger;
@@ -45,7 +45,7 @@ public class BalanceService : IBalanceService
         var currentBalance = _getCurrentBalanceQueryHandler.Handle(new GetCurrentBalanceQuery(bankId, userId));
         var exchanged = _moneyExchanger.Exchange(bankId, moneyExchange, currentBalance?.Currency ?? moneyExchange.Currency);
 
-        var newBalance = new Database.Models.Balance
+        var newBalance = new Database.Entities.Balance
         {
             UserId = userId,
             BankId = bankId,

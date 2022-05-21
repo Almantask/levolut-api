@@ -1,4 +1,4 @@
-using Levolut.Api.V2.Database.Models;
+using Levolut.Api.V2.Database.Entities;
 using Levolut.Api.V2.Database.Query.Queries;
 
 namespace Levolut.Api.V2.Database.Query.Handlers;

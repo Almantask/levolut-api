@@ -1,4 +1,4 @@
-﻿using Levolut.Api.V2.Database.Models;
+﻿using Levolut.Api.V2.Database.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Levolut.Api.V2.Database

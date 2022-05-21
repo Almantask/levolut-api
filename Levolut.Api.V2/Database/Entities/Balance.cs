@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Levolut.Api.V2.Database.Models
+namespace Levolut.Api.V2.Database.Entities
 {
     public class Balance
     {

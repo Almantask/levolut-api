@@ -1,7 +1,7 @@
 ﻿using Levolut.Api.V2.Controllers;
 using Levolut.Api.V2.Database.Command.Commands;
 using Levolut.Api.V2.Database.Command.Handlers;
-using Levolut.Api.V2.Database.Models;
+using Levolut.Api.V2.Database.Entities;
 using Levolut.Api.V2.Database.Query.Handlers;
 using Levolut.Api.V2.Database.Query.Queries;
 using Levolut.Api.V2.Services.Balance;

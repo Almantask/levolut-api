@@ -1,4 +1,4 @@
-using Levolut.Api.V2.Database.Models;
+using Levolut.Api.V2.Database.Entities;
 using Levolut.Api.V2.Database.Query.Queries;
 using Levolut.Api.V2.Exceptions;
 using Microsoft.EntityFrameworkCore;
