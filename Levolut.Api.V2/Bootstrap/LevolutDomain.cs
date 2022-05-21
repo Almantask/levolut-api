@@ -14,12 +14,15 @@ namespace Levolut.Api.V2.Bootstrap
         {
             services.AddScoped<IBankFeeService, BankFeeService>();
             // Mention that we could use a base class here in order to simplify DI and escape repetitive context injection.
+            // What are the tradeoffs?
             services.AddScoped<IQueryHandler<GetBankFeeRuleQuery, BankFeeRule>, GetBankFeeRuleQueryHandler>();
             services.AddScoped<IQueryHandler<GetCurrentBalanceQuery, Balance>, GetCurrentBalanceQueryHandler>();
             services.AddScoped<ICommandHandler<AddBankFeeRuleCommand, BankFeeRule>, AddBankFeeRuleCommandHandler>();
             services.AddScoped<ICommandHandler<AddBalanceCommand, Balance>, AddBalanceCommandHandler>();
-            services.AddSingleton<ICurrencyProvider, CurrencyProvider>();
             services.AddScoped<IMoneyExchanger, MoneyExchanger>();
+            services.AddScoped<IBalanceService, BalanceService>();
+
+            services.AddSingleton<ICurrencyProvider, CurrencyProvider>();
             return services;
         }
     }

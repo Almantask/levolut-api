@@ -14,7 +14,7 @@ static void SetupServices(IServiceCollection services)
     services.AddControllerConfiguration();
     services.AddDocs();
     services.AddLevolutDatabase();
-    services.AddErrorHandling();
+    services.AddErrorHandling(builder.Environment);
     services.AddLevolutDomain();
 }
 

@@ -1,6 +1,7 @@
 using Levolut.Api.V2.Database.Models;
 using Levolut.Api.V2.Database.Query.Handlers;
 using Levolut.Api.V2.Database.Query.Queries;
+using Levolut.Api.V2.Exceptions;
 
 namespace Levolut.Api.V2.Services;
 
@@ -38,7 +39,7 @@ public class MoneyExchanger : IMoneyExchanger
     {
         if (blockedCountries.Any(bc => bc.Name == country))
         {
-            throw new InvalidOperationException("Country is blocked.");
+            throw new BlockedCountryException(country);
         }
     }
 }
