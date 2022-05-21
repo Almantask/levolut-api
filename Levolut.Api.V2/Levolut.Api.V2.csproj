@@ -7,10 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Infrastructure\Database\Handlers\**" />
-    <Content Remove="Infrastructure\Database\Handlers\**" />
-    <EmbeddedResource Remove="Infrastructure\Database\Handlers\**" />
-    <None Remove="Infrastructure\Database\Handlers\**" />
+    <Compile Remove="Database\Handlers\**" />
+    <Content Remove="Database\Handlers\**" />
+    <EmbeddedResource Remove="Database\Handlers\**" />
+    <None Remove="Database\Handlers\**" />
   </ItemGroup>
 
   <ItemGroup>
