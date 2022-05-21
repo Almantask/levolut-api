@@ -1,5 +1,4 @@
-﻿using Levolut.Api.V2.Infrastructure.Database.Models;
-using Levolut.Api.V2.Services.Interfaces;
+﻿using Levolut.Api.V2.Database.Models;
 
 namespace Levolut.Api.V2.Services
 {

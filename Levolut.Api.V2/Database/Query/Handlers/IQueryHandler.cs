@@ -1,4 +1,4 @@
-﻿namespace Levolut.Api.V2.QueryHandlers
+﻿namespace Levolut.Api.V2.Database.Query.Handlers
 {
     // LSP and ISP compliant.
     // Why is it better than repo?

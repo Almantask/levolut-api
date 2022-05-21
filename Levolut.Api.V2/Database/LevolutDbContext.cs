@@ -1,7 +1,7 @@
-﻿using Levolut.Api.V2.Infrastructure.Database.Models;
+﻿using Levolut.Api.V2.Database.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Levolut.Api.V2.Infrastructure.Database
+namespace Levolut.Api.V2.Database
 {
     public class LevolutDbContext : DbContext
     {

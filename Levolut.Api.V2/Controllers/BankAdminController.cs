@@ -1,7 +1,6 @@
 using Levolut.Api.V2.Contracts;
-using Levolut.Api.V2.Infrastructure.Database;
-using Levolut.Api.V2.Infrastructure.Database.Models;
-using Levolut.Api.V2.Services.Interfaces;
+using Levolut.Api.V2.Database.Models;
+using Levolut.Api.V2.Services;
 using Microsoft.AspNetCore.Mvc;
 // What is the responsibility of a controller?
 // What code should it contain and should this be here?

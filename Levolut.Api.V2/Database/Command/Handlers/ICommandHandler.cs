@@ -1,4 +1,4 @@
-﻿namespace Levolut.Api.V2.CommandHandlers
+﻿namespace Levolut.Api.V2.Database.Command.Handlers
 {
     public interface ICommandHandler<TCommand, TResponse>
         where TCommand : class

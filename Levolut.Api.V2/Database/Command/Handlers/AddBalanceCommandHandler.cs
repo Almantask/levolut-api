@@ -1,8 +1,7 @@
-using Levolut.Api.V2.CommandHandlers;
-using Levolut.Api.V2.Infrastructure.Database;
-using Levolut.Api.V2.Infrastructure.Database.Models;
+using Levolut.Api.V2.Database.Command.Commands;
+using Levolut.Api.V2.Database.Models;
 
-namespace Levolut.Api.V2.Controllers;
+namespace Levolut.Api.V2.Database.Command.Handlers;
 
 public class AddBalanceCommandHandler : ICommandHandler<AddBalanceCommand, Balance>
 {

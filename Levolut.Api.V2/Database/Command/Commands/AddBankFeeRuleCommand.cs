@@ -1,14 +1,6 @@
-﻿using Levolut.Api.V2.Infrastructure.Database.Models;
+﻿using Levolut.Api.V2.Database.Models;
 
-namespace Levolut.Api.V2.CommandHandlers.Commands
+namespace Levolut.Api.V2.Database.Command.Commands
 {
-    public class AddBankFeeRuleCommand
-    {
-        public BankFeeRule BankFeeRule { get; }
-
-        public AddBankFeeRuleCommand(BankFeeRule bankFeeRule)
-        {
-            BankFeeRule = bankFeeRule;
-        }
-    }
+    public record AddBankFeeRuleCommand(BankFeeRule BankFeeRule);
 }

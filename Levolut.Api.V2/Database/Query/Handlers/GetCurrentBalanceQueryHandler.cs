@@ -1,8 +1,7 @@
-using Levolut.Api.V2.Infrastructure.Database;
-using Levolut.Api.V2.Infrastructure.Database.Models;
-using Levolut.Api.V2.QueryHandlers;
+using Levolut.Api.V2.Database.Models;
+using Levolut.Api.V2.Database.Query.Queries;
 
-namespace Levolut.Api.V2.Controllers;
+namespace Levolut.Api.V2.Database.Query.Handlers;
 
 public class GetCurrentBalanceQueryHandler : IQueryHandler<GetCurrentBalanceQuery, Balance>
 {
