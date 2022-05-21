@@ -1,6 +1,6 @@
 ﻿using Levolut.Api.V2.Database.Models;
 
-namespace Levolut.Api.V2.Services
+namespace Levolut.Api.V2.Services.MoneyExchange
 {
     public class CurrencyProvider : ICurrencyProvider
     {

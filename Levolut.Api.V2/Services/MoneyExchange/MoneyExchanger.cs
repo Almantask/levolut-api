@@ -3,7 +3,7 @@ using Levolut.Api.V2.Database.Query.Handlers;
 using Levolut.Api.V2.Database.Query.Queries;
 using Levolut.Api.V2.Exceptions;
 
-namespace Levolut.Api.V2.Services;
+namespace Levolut.Api.V2.Services.MoneyExchange;
 
 public class MoneyExchanger : IMoneyExchanger
 {
@@ -16,7 +16,7 @@ public class MoneyExchanger : IMoneyExchanger
         _getBankFeeRuleQueryHandler = getBankFeeRuleQueryHandler;
     }
 
-    public decimal Exchange(long bankId, MoneyExchange moneyExchange, Currency fromCurrency)
+    public decimal Exchange(long bankId, Models.MoneyExchange moneyExchange, Currency fromCurrency)
     {
         var bankFeeRule = _getBankFeeRuleQueryHandler.Handle(new GetBankFeeRuleQuery(bankId));
         RequireNotBlockedCountry(bankFeeRule.BlockedCountries, moneyExchange.FromCountry);
@@ -25,7 +25,7 @@ public class MoneyExchanger : IMoneyExchanger
         return exchanged;
     }
 
-    private decimal ExchangeMoney(MoneyExchange moneyExchange, Currency fromCurrency, decimal fee)
+    private decimal ExchangeMoney(Models.MoneyExchange moneyExchange, Currency fromCurrency, decimal fee)
     {
         var exchangeFee = moneyExchange.Currency == fromCurrency ? 0 : fee;
         var requestCurrencyRate = _currencyProvider.GetRate(moneyExchange.Currency);

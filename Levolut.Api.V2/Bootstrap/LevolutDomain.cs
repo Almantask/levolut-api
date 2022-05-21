@@ -4,7 +4,9 @@ using Levolut.Api.V2.Database.Command.Handlers;
 using Levolut.Api.V2.Database.Models;
 using Levolut.Api.V2.Database.Query.Handlers;
 using Levolut.Api.V2.Database.Query.Queries;
-using Levolut.Api.V2.Services;
+using Levolut.Api.V2.Services.Balance;
+using Levolut.Api.V2.Services.BankFee;
+using Levolut.Api.V2.Services.MoneyExchange;
 
 namespace Levolut.Api.V2.Bootstrap
 {

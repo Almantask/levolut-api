@@ -1,5 +1,7 @@
 using Levolut.Api.V2.Contracts;
-using Levolut.Api.V2.Services;
+using Levolut.Api.V2.Contracts.Requests;
+using Levolut.Api.V2.Contracts.Responses;
+using Levolut.Api.V2.Services.Balance;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Levolut.Api.V2.Controllers
