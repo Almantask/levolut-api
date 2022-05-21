@@ -2,19 +2,19 @@ using Hellang.Middleware.ProblemDetails;
 using Levolut.Api.V2.Bootstrap;
 
 var builder = WebApplication.CreateBuilder(args);
-SetupServices(builder.Services);
+SetupServices(builder.Services, builder.Environment);
 
 var app = builder.Build();
 SetupMiddleware(app);
 
 app.Run();
 
-static void SetupServices(IServiceCollection services)
+static void SetupServices(IServiceCollection services, IWebHostEnvironment environment)
 {
     services.AddControllerConfiguration();
     services.AddDocs();
     services.AddLevolutDatabase();
-    services.AddErrorHandling(builder.Environment);
+    services.AddErrorHandling(environment);
     services.AddLevolutDomain();
 }
 
