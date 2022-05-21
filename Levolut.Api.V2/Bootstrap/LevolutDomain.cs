@@ -4,7 +4,6 @@ using Levolut.Api.V2.Database.Command.Handlers;
 using Levolut.Api.V2.Database.Models;
 using Levolut.Api.V2.Database.Query.Handlers;
 using Levolut.Api.V2.Database.Query.Queries;
-using Levolut.Api.V2.QueryHandlers.Queries;
 using Levolut.Api.V2.Services;
 
 namespace Levolut.Api.V2.Bootstrap
@@ -21,7 +20,6 @@ namespace Levolut.Api.V2.Bootstrap
             services.AddScoped<ICommandHandler<AddBalanceCommand, Balance>, AddBalanceCommandHandler>();
             services.AddSingleton<ICurrencyProvider, CurrencyProvider>();
             services.AddScoped<IMoneyExchanger, MoneyExchanger>();
-            services.AddScoped<IMoney>
             return services;
         }
     }

@@ -1,4 +1,4 @@
 ﻿namespace Levolut.Api.V2.Contracts
 {
-    public record CashMoneyResponse(decimal Balance)
+    public record CashMoneyResponse(decimal Balance);
 }

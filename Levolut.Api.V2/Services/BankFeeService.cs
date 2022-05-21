@@ -1,11 +1,10 @@
-﻿using Levolut.Api.V2.Controllers;
+﻿
 using Levolut.Api.V2.Database.Command.Commands;
 using Levolut.Api.V2.Database.Command.Handlers;
 using Levolut.Api.V2.Database.Models;
 using Levolut.Api.V2.Database.Query.Handlers;
 using Levolut.Api.V2.Database.Query.Queries;
 using Levolut.Api.V2.Exceptions;
-using Levolut.Api.V2.QueryHandlers.Queries;
 
 namespace Levolut.Api.V2.Services
 {
