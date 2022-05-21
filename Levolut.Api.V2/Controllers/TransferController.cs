@@ -145,6 +145,8 @@ namespace Levolut.Api.V2.Controllers
             var requestCurrencyRate = _currencyProvider.GetRate(moneyExchange.Currency);
             var currentBalanceCurrencyRate = _currencyProvider.GetRate(fromCurrency);
             var exchanged = moneyExchange.Amount / currentBalanceCurrencyRate * requestCurrencyRate * (1 - exchangeFee);
+
+            return exchanged;
         }
 
         private void RequireNotBlockedCountry(IEnumerable<BlockedCountry> blockedCountries, string country)
