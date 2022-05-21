@@ -2,8 +2,5 @@
 
 namespace Levolut.Api.V2.Contracts
 {
-    internal class GetBankFeeRulesResponse
-    {
-        public BankFeeRule BankFeeRule { get; internal set; }
-    }
+    public record GetBankFeeRulesResponse(BankFeeRule BankFeeRule);
 }

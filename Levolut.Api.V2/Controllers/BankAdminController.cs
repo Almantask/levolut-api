@@ -33,10 +33,7 @@ namespace Levolut.Api.V2.Controllers
             // Services, mediator, use case object.
             var bankFeeRule = bankFeeSerivce.GetBankFeeRule(bankId);
 
-            return Ok(new GetBankFeeRulesResponse
-            {
-                BankFeeRule = bankFeeRule,
-            });
+            return Ok(new GetBankFeeRulesResponse(bankFeeRule));
         }
 
         [HttpPost(Name = "Rule/{bankId}")]

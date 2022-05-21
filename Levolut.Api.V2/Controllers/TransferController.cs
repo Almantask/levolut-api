@@ -22,7 +22,7 @@ namespace Levolut.Api.V2.Controllers
         public IActionResult GetBalance(long userId, long bankId)
         {
             var balance = _balanceService.GetCurrentBalance(userId, bankId);
-            return Ok(new GetBalanceResponse { Balance = balance });
+            return Ok(new GetBalanceResponse(balance));
         }
 
         [HttpPost("Add/{bankId}/{userId}")]
@@ -31,7 +31,7 @@ namespace Levolut.Api.V2.Controllers
         public IActionResult AddMoney(long bankId, long userId, [FromBody] AddMoneyRequest request)
         {
             var balance = _balanceService.AddMoney(userId, bankId, request.MoneyExchange);
-            return Ok(new AddMoneyResponse { Balance = balance });
+            return Ok(new AddMoneyResponse(balance));
         }
 
         [HttpPost("Cash/{bankId}/{userId}")]
@@ -40,7 +40,7 @@ namespace Levolut.Api.V2.Controllers
         public IActionResult CashMoney(long bankId, long userId, [FromBody] CashMoneyRequest request)
         {
             var balance = _balanceService.CashMoney(bankId, userId, request.MoneyExchange);
-            return Ok(new CashMoneyResponse { Balance = balance });
+            return Ok(new CashMoneyResponse(balance));
         }
     }
 }
