@@ -8,7 +8,7 @@ namespace Levolut.Api.V2.Services.MoneyExchange;
 public class MoneyExchanger : IMoneyExchanger
 {
     private readonly ICurrencyProvider _currencyProvider;
-    private IQueryHandler<GetBankFeeRuleQuery, BankFeeRule> _getBankFeeRuleQueryHandler;
+    private readonly IQueryHandler<GetBankFeeRuleQuery, BankFeeRule> _getBankFeeRuleQueryHandler;
 
     public MoneyExchanger(ICurrencyProvider currencyProvider, IQueryHandler<GetBankFeeRuleQuery, BankFeeRule> getBankFeeRuleQueryHandler)
     {
