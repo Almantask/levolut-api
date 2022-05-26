@@ -59,5 +59,12 @@ public class BalanceService : IBalanceService
     }
 
     private static decimal Add(decimal currentAmount, decimal exchanged) => currentAmount + exchanged;
-    private static decimal Take(decimal currentAmount, decimal exchanged) => currentAmount - exchanged;
+    private static decimal Take(decimal currentAmount, decimal exchanged)
+    {
+        if (currentAmount < exchanged)
+        {
+            throw new InvalidOperationException("You don't have enough money to cash.");
+        }
+        return currentAmount - exchanged;
+    }
 }
