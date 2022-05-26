@@ -13,6 +13,7 @@ static void SetupServices(IServiceCollection services, IWebHostEnvironment envir
 {
     services.AddControllerConfiguration();
     services.AddDocs();
+    services.AddLevolutLogging(environment);
     services.AddLevolutDatabase();
     services.AddErrorHandling(environment);
     services.AddLevolutDomain();
