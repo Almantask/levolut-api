@@ -34,6 +34,11 @@ namespace Levolut.Api.V2.Bootstrap
                 options.Providers.Add<GzipCompressionProvider>();
             });
 
+            //Also can be enriched with:
+            //services.AddHsts()
+            //services.AddDefaultCorrelationId()
+            //services.AddCors()
+
             return services;
         }
     }
