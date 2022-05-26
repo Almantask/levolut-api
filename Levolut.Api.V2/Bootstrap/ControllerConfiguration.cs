@@ -1,4 +1,7 @@
-﻿namespace Levolut.Api.V2.Bootstrap
+﻿using Microsoft.AspNetCore.ResponseCompression;
+using System.IO.Compression;
+
+namespace Levolut.Api.V2.Bootstrap
 {
     public static class ControllerConfiguration
     {
@@ -19,6 +22,17 @@
                     options.GroupNameFormat = "'v'VVV";
                     options.SubstituteApiVersionInUrl = true;
                 });
+
+            services.Configure<GzipCompressionProviderOptions>(options =>
+            {
+                options.Level = CompressionLevel.Optimal;
+            });
+
+            services.AddResponseCompression(options =>
+            {
+                options.EnableForHttps = true;
+                options.Providers.Add<GzipCompressionProvider>();
+            });
 
             return services;
         }

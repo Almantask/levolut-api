@@ -30,6 +30,9 @@ static void SetupMiddleware(WebApplication app)
         });
     }
 
+    app.UseResponseCaching();
+    app.UseResponseCompression();
+
     app.UseProblemDetails();
 
     app.UseAuthorization();
