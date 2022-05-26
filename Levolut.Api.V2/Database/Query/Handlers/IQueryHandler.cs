@@ -1,12 +1,11 @@
 ﻿namespace Levolut.Api.V2.Database.Query.Handlers
 {
-    // LSP and ISP compliant.
+    // ISP compliant.
     // Why is it better than repo?
-    // API versioning when?
 
     // Question about having generic vs non-generic handlers
     // The benefit of this vs repository pattern.
-    public interface IQueryHandler<TQuery, TResponse>
+    public interface IQueryHandler<in TQuery, out TResponse>
     {
         TResponse Handle(TQuery getRuleQuery);
     }
