@@ -1,8 +1,6 @@
 ﻿namespace Levolut.Api.V2.Database.Command.Handlers
 {
-    public interface ICommandHandler<TCommand, TResponse>
-        where TCommand : class
-        where TResponse : class
+    public interface ICommandHandler<in TCommand, out TResponse>
     {
         TResponse Handle(TCommand getRuleQuery);
     }
