@@ -18,7 +18,7 @@ namespace Levolut.Api.V2.Bootstrap
             }
             else
             {
-                // Application insights
+                //Possible to extend with Application insights
                 loggerConfiguration.WriteTo
                     .File("logs/levolut.txt", rollingInterval: RollingInterval.Day);
             }
