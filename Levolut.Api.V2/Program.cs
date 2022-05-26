@@ -24,7 +24,10 @@ static void SetupMiddleware(WebApplication app)
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
-        app.UseSwaggerUI();
+        app.UseSwaggerUI(options =>
+        {
+            options.SwaggerEndpoint("/swagger/v2/swagger.json", "v2");
+        });
     }
 
     app.UseProblemDetails();
