@@ -24,6 +24,7 @@ namespace Levolut.Api.V2.Controllers
         }
 
         [HttpGet(Name = "Rule/{bankId}")]
+        [ResponseCache(VaryByHeader = "User-Agent", Duration = 30)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetBankFeeRulesResponse))]
         public IActionResult GetRules(long bankId)
         {
