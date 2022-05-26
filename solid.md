@@ -98,7 +98,10 @@ ___
 
 ### Choosing the right implementation
 
-[Record for contracts]()
+[Record for contracts](./Levolut.Api.V2/Contracts/Requests/AddBankFeeRuleRequest.cs)
+
+- What choices we have for implementing models?
+- Why is record great?
 
 ---
 
