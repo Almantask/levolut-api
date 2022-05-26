@@ -1,0 +1,11 @@
+Initial talk:
+
+Sveiki visi ðendien èia  "centric Lietuva" podcastas, kurio tema yra "SOLID principø taikymas praktikoje".
+ Að, Eimantas Þlabys, vyresnysis programuotojas ið kompanijos Centric Lietuva, bei mano kolega Almantas. Almantai, gal galëtum trumpai prisistatyti? ...Aèiû tau.
+ Na va, visi jau geriau susipaþinom su Almantu dabar metas susipaþinti ir su projektu, kurá mes ðiandien nagrinësime ir bandysime pritaikyti SOLID principus siekiant pagerinti produktà.
+Tai demo Levolut projektas, kuris atspindi realià biznio logikà, turi kelis endpointus....
+
+
+Apie ka galima dar pakalbeti:
++ Error handlinimas
++ Logginimas

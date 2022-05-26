@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Levolut.Api.V2.Controllers
 {
     [ApiController]
-    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
     [Route("api/v{v:apiVersion}/[controller]")]
     [Produces("application/json")]
     public class TransferController : ControllerBase

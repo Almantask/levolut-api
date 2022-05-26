@@ -17,18 +17,31 @@ Api can:
 - Exchange currency
 - Exchange fee
 
-TODO: Move links from bookmark with remarks that we had as comments in code.
-TODO: Swagger examples
-[Central Error Handling](./Levolut.Api.V2/Bootstrap/ErrorHandling.cs)
+The API has just enough complexity to showcase what problems could come from a poorly managed code base.
+From a codebase that violates SOLID principles.
 
-Initial talk:
+## S - Single Responsibility
 
-Sveiki visi ðendien èia  "centric Lietuva" podcastas, kurio tema yra "SOLID principø taikymas praktikoje".
- Að, Eimantas Þlabys, vyresnysis programuotojas ið kompanijos Centric Lietuva, bei mano kolega Almantas. Almantai, gal galëtum trumpai prisistatyti? ...Aèiû tau.
- Na va, visi jau geriau susipaþinom su Almantu dabar metas susipaþinti ir su projektu, kurá mes ðiandien nagrinësime ir bandysime pritaikyti SOLID principus siekiant pagerinti produktà.
-Tai demo Levolut projektas, kuris atspindi realià biznio logikà, turi kelis endpointus....
+### [Centralized Bootstrap](./Levolut.Api.V2/Bootstrap)
+
+### [Central Error Handling](./Levolut.Api.V2/Bootstrap/ErrorHandling.cs)
+
+### []
+
+## O - Open-Closed
+
+[Contracts]()
+
+## L - Liskov Substitution
 
 
-Apie ka galima dar pakalbeti:
-+ Error handlinimas
-+ Logginimas
+
+## I - Interface Segregation
+
+
+
+## Dependency Inversion
+
+
+
+
