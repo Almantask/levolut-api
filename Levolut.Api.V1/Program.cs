@@ -12,7 +12,7 @@ app.Run();
 static void SetupServices(IServiceCollection services)
 {
     services.AddDbContext<LevolutDbContext>(options => options.UseInMemoryDatabase("Levolut"));
-    services.AddSingleton<ICurrencyProvider, CurrencyProvider>();
+    services.AddSingleton<ICurrencyProvider, StubCurrencyProvider>();
     services.AddControllers().AddNewtonsoftJson();
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();

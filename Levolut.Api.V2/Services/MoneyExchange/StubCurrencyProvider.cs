@@ -2,7 +2,7 @@
 
 namespace Levolut.Api.V2.Services.MoneyExchange
 {
-    public class CurrencyProvider : ICurrencyProvider
+    public class StubCurrencyProvider : ICurrencyProvider
     {
         public decimal GetRate(Currency currency)
         {

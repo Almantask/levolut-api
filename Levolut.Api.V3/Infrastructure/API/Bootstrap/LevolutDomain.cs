@@ -1,13 +1,13 @@
-﻿using Levolut.Api.V2.Database.Command.Commands;
-using Levolut.Api.V2.Database.Command.Handlers;
-using Levolut.Api.V2.Database.Entities;
-using Levolut.Api.V2.Database.Query.Handlers;
-using Levolut.Api.V2.Database.Query.Queries;
-using Levolut.Api.V2.Services.Balance;
-using Levolut.Api.V2.Services.BankFee;
-using Levolut.Api.V2.Services.MoneyExchange;
+﻿using Levolut.Api.V3.Domain.Command;
+using Levolut.Api.V3.Domain.Query;
+using Levolut.Api.V3.Domain.Services.Balance;
+using Levolut.Api.V3.Domain.Services.BankFee;
+using Levolut.Api.V3.Domain.Services.MoneyExchange;
+using Levolut.Api.V3.Infrastructure.Database.Entities;
+using Levolut.Api.V3.Infrastructure.Database.Handlers.Command;
+using Levolut.Api.V3.Infrastructure.Database.Query.Handlers;
 
-namespace Levolut.Api.V2.Bootstrap
+namespace Levolut.Api.V3.Infrastructure.API.Bootstrap
 {
     public static class LevolutDomain
     {

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{47C3ECB9-CFCE-4C74-8787-C29D97004140}"
 	ProjectSection(SolutionItems) = preProject
-		Intro.text = Intro.text
+		ddd.md = ddd.md
 		solid.md = solid.md
 	EndProjectSection
 EndProject
@@ -17,6 +17,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Levolut.Api.V1", "Levolut.Api.V1\Levolut.Api.V1.csproj", "{5DF1C65B-6036-4E5D-92B5-DF8FB6FC81E7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Levolut.Api.V2", "Levolut.Api.V2\Levolut.Api.V2.csproj", "{F54FB0D5-6314-4926-B6D2-DC1377570BE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Levolut.Api.V3", "Levolut.Api.V3\Levolut.Api.V3.csproj", "{DF0EEA3A-67F6-4C3E-95AB-39778E7DFD13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{F54FB0D5-6314-4926-B6D2-DC1377570BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F54FB0D5-6314-4926-B6D2-DC1377570BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F54FB0D5-6314-4926-B6D2-DC1377570BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0EEA3A-67F6-4C3E-95AB-39778E7DFD13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0EEA3A-67F6-4C3E-95AB-39778E7DFD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0EEA3A-67F6-4C3E-95AB-39778E7DFD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0EEA3A-67F6-4C3E-95AB-39778E7DFD13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

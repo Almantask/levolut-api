@@ -1,9 +1,9 @@
-using Levolut.Api.V2.Contracts.Requests;
-using Levolut.Api.V2.Contracts.Responses;
-using Levolut.Api.V2.Services.Balance;
+using Levolut.Api.V3.Domain.Services.Balance;
+using Levolut.Api.V3.Infrastructure.API.Contracts.Requests;
+using Levolut.Api.V3.Infrastructure.API.Contracts.Responses;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Levolut.Api.V2.Controllers
+namespace Levolut.Api.V3.Infrastructure.API.Controllers
 {
     [ApiController]
     [ApiVersion("2.0")]

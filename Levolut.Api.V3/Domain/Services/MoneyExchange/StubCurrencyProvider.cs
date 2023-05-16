@@ -1,8 +1,8 @@
-﻿using Levolut.Api.V1.Infrastructure.Database.Models;
+﻿using Levolut.Api.V3.Infrastructure.Database.Entities;
 
-namespace Levolut.Api.V1.Services
+namespace Levolut.Api.V3.Domain.Services.MoneyExchange
 {
-    public class CurrencyProvider : ICurrencyProvider
+    public class StubCurrencyProvider : ICurrencyProvider
     {
         public decimal GetRate(Currency currency)
         {
