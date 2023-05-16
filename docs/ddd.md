@@ -79,3 +79,9 @@ Everything else is infrastructure. Domain cannot reference it. So it include: AP
 DDD is difficult to start with and is a learning curve for anyone new to it. If your project is simple (small, short lived) - then you may not bother. There isn't much point to apply DDD, if you won't even get to see how well your system reacts to changes, how easy it is to evolve it. Use DDD when domain is complex and you plan to develop a project for a long time. 
 
 Did you choose the right architecture? It's a question that calls for an allegory of bridges. Is a bridge good? You won't know until it collapses. If it did - it was not a good bridge. But if a bridge can whithstand the test of time - then it was indeed a good bridge.
+
+## Other examples
+
+- https://github.com/kgrzybek/modular-monolith-with-ddd - you don't have to go microservices to have a good architecture
+- https://github.com/dotnet-architecture/eShopOnContainers - microservices done right
+- https://github.com/Almantask/BDD-Specflow-Demo-SimplCommerce/tree/master/tests/SimplCommerce.AcceptanceTests - self-documenting tests or a wiki covered with automated tests
