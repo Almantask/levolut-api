@@ -1,7 +1,7 @@
 ﻿using Levolut.Api.V3.Domain.Command;
 using Levolut.Api.V3.Domain.Exceptions;
+using Levolut.Api.V3.Domain.Models.Entities;
 using Levolut.Api.V3.Domain.Query;
-using Levolut.Api.V3.Infrastructure.Database.Entities;
 
 namespace Levolut.Api.V3.Domain.Services.BankFee
 {

@@ -1,6 +1,7 @@
 using Levolut.Api.V3.Infrastructure.Database.Entities;
 
-namespace Levolut.Api.V3.Domain.Models;
+namespace Levolut.Api.V3.Domain.Models.ValueObjects;
 
-// Introducing a breaking change.
+// Value object - no id, primitive.
+// Will not be persisted by itself.
 public record MoneyExchange(decimal Amount, Currency Currency, string FromCountry);

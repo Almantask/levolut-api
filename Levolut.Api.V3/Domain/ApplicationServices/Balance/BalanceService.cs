@@ -7,11 +7,11 @@ namespace Levolut.Api.V3.Domain.Services.Balance;
 
 public class BalanceService : IBalanceService
 {
-    private readonly IQueryHandler<GetCurrentBalanceQuery, Infrastructure.Database.Entities.Balance> _getCurrentBalanceQueryHandler;
+    private readonly IQueryHandler<GetCurrentBalanceQuery, Models.Entities.Balance> _getCurrentBalanceQueryHandler;
     private readonly IMoneyExchanger _moneyExchanger;
-    private readonly ICommandHandler<AddBalanceCommand, Infrastructure.Database.Entities.Balance> _addBalanceCommandHandler;
+    private readonly ICommandHandler<AddBalanceCommand, Models.Entities.Balance> _addBalanceCommandHandler;
 
-    public BalanceService(IQueryHandler<GetCurrentBalanceQuery, Infrastructure.Database.Entities.Balance> getCurrentBalanceQueryHandler, IMoneyExchanger moneyExchanger, ICommandHandler<AddBalanceCommand, Infrastructure.Database.Entities.Balance> addBalanceCommandHandler)
+    public BalanceService(IQueryHandler<GetCurrentBalanceQuery, Models.Entities.Balance> getCurrentBalanceQueryHandler, IMoneyExchanger moneyExchanger, ICommandHandler<AddBalanceCommand, Models.Entities.Balance> addBalanceCommandHandler)
     {
         _getCurrentBalanceQueryHandler = getCurrentBalanceQueryHandler;
         _moneyExchanger = moneyExchanger;
@@ -30,15 +30,15 @@ public class BalanceService : IBalanceService
         return balance.Amount;
     }
 
-    public decimal AddMoney(long userId, long bankId, Models.MoneyExchange request)
+    public decimal AddMoney(long userId, long bankId, Models.ValueObjects.MoneyExchange request)
         => TransferMoney(Add, bankId, userId, request);
 
-    public decimal CashMoney(long bankId, long userId, Models.MoneyExchange request)
+    public decimal CashMoney(long bankId, long userId, Models.ValueObjects.MoneyExchange request)
         => TransferMoney(Take, bankId, userId, request);
 
     private decimal TransferMoney(
         Func<decimal, decimal, decimal> addOrTake,
-        long bankId, long userId, Models.MoneyExchange moneyExchange)
+        long bankId, long userId, Models.ValueObjects.MoneyExchange moneyExchange)
     {
         var currentBalance = _getCurrentBalanceQueryHandler.Handle(new GetCurrentBalanceQuery(bankId, userId));
         var exchanged = _moneyExchanger.Exchange(bankId, moneyExchange, currentBalance?.Currency ?? moneyExchange.Currency);

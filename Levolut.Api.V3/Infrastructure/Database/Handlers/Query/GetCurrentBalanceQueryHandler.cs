@@ -1,5 +1,5 @@
+using Levolut.Api.V3.Domain.Models.Entities;
 using Levolut.Api.V3.Domain.Query;
-using Levolut.Api.V3.Infrastructure.Database.Entities;
 
 namespace Levolut.Api.V3.Infrastructure.Database.Query.Handlers;
 

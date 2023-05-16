@@ -1,6 +1,6 @@
 using Levolut.Api.V3.Domain.Exceptions;
+using Levolut.Api.V3.Domain.Models.Entities;
 using Levolut.Api.V3.Domain.Query;
-using Levolut.Api.V3.Infrastructure.Database.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Levolut.Api.V3.Infrastructure.Database.Query.Handlers;

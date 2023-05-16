@@ -1,4 +1,4 @@
-﻿namespace Levolut.Api.V3.Infrastructure.Database.Entities
+﻿namespace Levolut.Api.V3.Domain.Models.Entities
 {
     public class BlockedCountry
     {

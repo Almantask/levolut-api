@@ -1,5 +1,5 @@
-﻿using Levolut.Api.V3.Domain.Services.MoneyExchange;
-using Levolut.Api.V3.Infrastructure.Database.Entities;
+﻿using Levolut.Api.V3.Domain.Models;
+using Levolut.Api.V3.Domain.Services.MoneyExchange;
 
 namespace Levolut.Api.V3.Infrastructure.Adapters.CurrencyProvider
 {

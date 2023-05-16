@@ -1,3 +1,4 @@
+using Levolut.Api.V3.Domain.Models.Entities;
 using Levolut.Api.V3.Domain.Services.BankFee;
 using Levolut.Api.V3.Infrastructure.API.Contracts.Requests;
 using Levolut.Api.V3.Infrastructure.API.Contracts.Responses;

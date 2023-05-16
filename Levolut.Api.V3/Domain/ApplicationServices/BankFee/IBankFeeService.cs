@@ -1,4 +1,4 @@
-﻿using Levolut.Api.V3.Infrastructure.Database.Entities;
+﻿using Levolut.Api.V3.Domain.Models.Entities;
 
 namespace Levolut.Api.V3.Domain.Services.BankFee
 {

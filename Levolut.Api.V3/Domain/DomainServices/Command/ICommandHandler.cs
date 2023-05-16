@@ -1,4 +1,4 @@
-﻿namespace Levolut.Api.V3.Domain.Command
+﻿namespace Levolut.Api.V3.Domain.DomainServices.Command
 {
     public interface ICommandHandler<in TCommand, out TResponse>
     {

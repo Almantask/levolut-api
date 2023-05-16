@@ -1,4 +1,4 @@
-﻿namespace Levolut.Api.V3.Domain.Query
+﻿namespace Levolut.Api.V3.Domain.DomainServices.Query
 {
     // ISP compliant.
     // Why is it better than repo?
