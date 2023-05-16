@@ -43,7 +43,7 @@ public class BalanceService : IBalanceService
         var currentBalance = _getCurrentBalanceQueryHandler.Handle(new GetCurrentBalanceQuery(bankId, userId));
         var exchanged = _moneyExchanger.Exchange(bankId, moneyExchange, currentBalance?.Currency ?? moneyExchange.Currency);
 
-        var newBalance = new Infrastructure.Database.Entities.Balance
+        var newBalance = new Domain.Models.Entities.Balance
         {
             UserId = userId,
             BankId = bankId,

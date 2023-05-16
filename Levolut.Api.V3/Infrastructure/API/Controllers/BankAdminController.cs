@@ -2,7 +2,6 @@ using Levolut.Api.V3.Domain.Models.Entities;
 using Levolut.Api.V3.Domain.Services.BankFee;
 using Levolut.Api.V3.Infrastructure.API.Contracts.Requests;
 using Levolut.Api.V3.Infrastructure.API.Contracts.Responses;
-using Levolut.Api.V3.Infrastructure.Database.Entities;
 using Microsoft.AspNetCore.Mvc;
 // What is the responsibility of a controller?
 // What code should it contain and should this be here?
