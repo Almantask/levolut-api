@@ -47,20 +47,20 @@ When designing software, think about it in terms of real life concepts. The nami
 
 The full map of DDD is below:
 
-[DDD full](https://thedomaindrivendesign.io/wp-content/uploads/2019/06/DomainDrivenDesignReference-700x620.png)
+![DDD full](https://thedomaindrivendesign.io/wp-content/uploads/2019/06/DomainDrivenDesignReference-700x620.png)
 
 When a project is complex, it will have multiple modules which you will have to segregate / group into bounded contexts. There will be pieces of code that all will share and you will have to move that into a shared kernel. The creation of objects may so complex, that you may need factories... And this is just some of the examples of struggles you may have to deal with.
 
 If you want to learn more - refer to [Eric Evans book Domain Driven Design](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215):
 
-[DDD Book](https://m.media-amazon.com/images/I/61aFldsgAmL._AC_UF1000,1000_QL80_.jpg)
+![DDD Book](https://m.media-amazon.com/images/I/61aFldsgAmL._AC_UF1000,1000_QL80_.jpg)
 
 ## Is Onion Architecture == DDD?
 
 Not quite. The initial idea of DDD was that we evolve the codebase, refactor code to represent business better as we get understanding.
 Onion Architecture, on top of that, solves the problem of DB being a centrepiece of all. DB is infrastructure, infra can change, so we should protect ourselves from that change. And the best way to do so is by moving it outside of the domain core - to infrastructure layer. Onion architecture, often called Hexagonal or architecture of Ports and Adapters - puts a one directional connection between infrastructure and domain. Infrastructure can reference domain, but not the other way round.
 
-[Onion Architecture](https://i.stack.imgur.com/gPKrg.jpg)
+![Onion Architecture](https://i.stack.imgur.com/gPKrg.jpg)
 
 ### Domain Services
 

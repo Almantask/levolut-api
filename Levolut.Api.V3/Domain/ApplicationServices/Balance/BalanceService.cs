@@ -1,6 +1,6 @@
-using Levolut.Api.V3.Domain.Command;
+using Levolut.Api.V3.Domain.DomainServices.Command;
+using Levolut.Api.V3.Domain.DomainServices.Query;
 using Levolut.Api.V3.Domain.Exceptions;
-using Levolut.Api.V3.Domain.Query;
 using Levolut.Api.V3.Domain.Services.MoneyExchange;
 
 namespace Levolut.Api.V3.Domain.Services.Balance;

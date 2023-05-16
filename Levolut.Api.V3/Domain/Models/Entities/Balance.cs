@@ -2,6 +2,7 @@
 
 namespace Levolut.Api.V3.Domain.Models.Entities
 {
+    // Entity - with an id, will be persisted.
     public class Balance
     {
         public int Id { get; set; }

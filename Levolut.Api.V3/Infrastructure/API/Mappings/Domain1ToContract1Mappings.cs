@@ -1,6 +1,6 @@
 ﻿namespace Levolut.Api.V3.Infrastructure.API.Mappings
 {
-    public class DomainToContractMappings
+    public class Domain1ToContract1Mappings
     {
     }
 }

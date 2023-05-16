@@ -5,8 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{47C3ECB9-CFCE-4C74-8787-C29D97004140}"
 	ProjectSection(SolutionItems) = preProject
-		ddd.md = ddd.md
-		solid.md = solid.md
+		docs\ddd.md = docs\ddd.md
+		docs\solid.md = docs\solid.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B82D504E-DDB9-4FFA-B2BF-B553B6C2CB71}"

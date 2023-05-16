@@ -1,7 +1,7 @@
+using Levolut.Api.V3.Domain.DomainServices.Query;
 using Levolut.Api.V3.Domain.Exceptions;
 using Levolut.Api.V3.Domain.Models;
 using Levolut.Api.V3.Domain.Models.Entities;
-using Levolut.Api.V3.Domain.Query;
 
 namespace Levolut.Api.V3.Domain.Services.MoneyExchange;
 

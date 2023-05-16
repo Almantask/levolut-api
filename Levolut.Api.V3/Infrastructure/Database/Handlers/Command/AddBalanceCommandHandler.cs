@@ -1,4 +1,4 @@
-using Levolut.Api.V3.Domain.Command;
+using Levolut.Api.V3.Domain.DomainServices.Command;
 using Levolut.Api.V3.Domain.Models.Entities;
 
 namespace Levolut.Api.V3.Infrastructure.Database.Handlers.Command;

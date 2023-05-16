@@ -1,6 +1,6 @@
-﻿using Levolut.Api.V3.Domain.Command;
+﻿using Levolut.Api.V3.Domain.DomainServices.Command;
+using Levolut.Api.V3.Domain.DomainServices.Query;
 using Levolut.Api.V3.Domain.Models.Entities;
-using Levolut.Api.V3.Domain.Query;
 using Levolut.Api.V3.Domain.Services.Balance;
 using Levolut.Api.V3.Domain.Services.BankFee;
 using Levolut.Api.V3.Domain.Services.MoneyExchange;
